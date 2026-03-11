@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetCare | SaaS Fleet Monitoring</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="carbon-bg">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="text-transform: uppercase; letter-spacing: 2px;">
+                <i class="fa-solid fa-flag-checkered"></i> Fleet<span>Care</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links items-center">
+                <li><a href="index.html" class="active"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">Home</a>
+                </li>
+                <li><a href="#why-us"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">Why
+                        Us</a></li>
+                <li><a href="#services"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">Services</a>
+                </li>
+                <li><a href="#features"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">Features</a>
+                </li>
+                <li><a href="#how"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">How
+                        It
+                        Works</a></li>
+                
+                <li><a href="dashboard.html"
+                        style="text-transform: uppercase; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="assets/F1_theme_cool_cars_video_delpmaspu_.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <h1 class="hero-title">FLEET<span>CARE</span></h1>
+            <p class="hero-subtitle">PRECISION PERFORMANCE FLEET MONITORING</p>
+
+            <div class="hero-buttons" style="margin-top: 2rem;">
+                <a href="dashboard.html" class="btn btn-primary"
+                    style="padding: 1rem 2.5rem; font-size: 1.1rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-gauge-high"></i> ENTER DASHBOARD
+                </a>
+            </div>
+
+            <div class="scroll-indicator">
+                SCROLL TO DATA
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Choose FleetCare -->
+    <section id="why-us" class="section container reveal">
+        <h2 class="section-title">Why Choose <span>FleetCare</span></h2>
+        <div class="features-grid">
+            <div class="card text-center glow-border">
+                <i class="fa-solid fa-satellite-dish card-icon"></i>
+                <h3 class="mb-2">Real-Time Fleet Monitoring</h3>
+                <p class="text-muted">Track your vehicles with live GPS mapping, telemetry data, and instant speed
+                    updates.</p>
+            </div>
+            <div class="card text-center glow-border">
+                <i class="fa-solid fa-wrench card-icon"></i>
+                <h3 class="mb-2">Automated Alerts</h3>
+                <p class="text-muted">Stay ahead of maintenance with predictive alerts based on vehicle mileage and
+                    wear.</p>
+            </div>
+            <div class="card text-center glow-border">
+                <i class="fa-solid fa-gas-pump card-icon"></i>
+                <h3 class="mb-2">Fuel Efficiency Tracking</h3>
+                <p class="text-muted">Analyze fuel consumption to dramatically reduce operating costs and optimize
+                    routing.</p>
+            </div>
+            <div class="card text-center glow-border">
+                <i class="fa-solid fa-chart-line card-icon"></i>
+                <h3 class="mb-2">Performance Analytics</h3>
+                <p class="text-muted">Generate detailed PDF reports highlighting the most and least efficient vehicles
+                    across the fleet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section container reveal"
+        style="background: rgba(255,255,255,0.02); border-radius: var(--border-radius); padding: var(--spacing-xl);">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <div class="services-grid">
+            <div class="card">
+                <div class="flex items-center mb-2">
+                    <i class="fa-solid fa-map-location-dot card-icon" style="margin: 0 15px 0 0; font-size: 2rem;"></i>
+                    <h3>Fleet Monitoring</h3>
+                </div>
+                <p class="text-muted">Get full visibility over complex logistics networks to ensure timely deliveries
+                    and compliance.</p>
+            </div>
+            <div class="card">
+                <div class="flex items-center mb-2">
+                    <i class="fa-solid fa-screwdriver-wrench card-icon"
+                        style="margin: 0 15px 0 0; font-size: 2rem;"></i>
+                    <h3>Maintenance Tracking</h3>
+                </div>
+                <p class="text-muted">Ensure all trucks are in peak operational condition to avoid costly downtime and
+                    repairs.</p>
+            </div>
+            <div class="card">
+                <div class="flex items-center mb-2">
+                    <i class="fa-solid fa-leaf card-icon" style="margin: 0 15px 0 0; font-size: 2rem;"></i>
+                    <h3>Fuel Analytics</h3>
+                </div>
+                <p class="text-muted">Drill down into fuel usages to find anomalies and drivers needing additional
+                    training.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section container reveal">
+        <h2 class="section-title">System <span>Capabilities</span></h2>
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="card text-center">
+                <i class="fa-solid fa-truck-fast card-icon" style="font-size: 2rem; color: var(--neon-blue);"></i>
+                <h4>Live Monitoring</h4>
+            </div>
+            <div class="card text-center">
+                <i class="fa-solid fa-road card-icon" style="font-size: 2rem; color: var(--neon-blue);"></i>
+                <h4>Mileage Tracking</h4>
+            </div>
+            <div class="card text-center">
+                <i class="fa-solid fa-circle-exclamation card-icon"
+                    style="font-size: 2rem; color: var(--neon-blue);"></i>
+                <h4>Service Alerts</h4>
+            </div>
+            <div class="card text-center">
+                <i class="fa-solid fa-flask card-icon" style="font-size: 2rem; color: var(--neon-blue);"></i>
+                <h4>Fuel Analytics</h4>
+            </div>
+            <div class="card text-center">
+                <i class="fa-solid fa-clipboard-list card-icon" style="font-size: 2rem; color: var(--neon-blue);"></i>
+                <h4>Performance Reports</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Works -->
+    <section id="how" class="section container reveal">
+        <h2 class="section-title">How FleetCare <span>Works</span></h2>
+        <div class="steps-grid">
+            <div class="card text-center" style="border-top: 4px solid var(--primary-accent);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--bg-tertiary); margin-bottom: 10px;">01</div>
+                <i class="fa-solid fa-truck-ramp-box card-icon"></i>
+                <h3 class="mb-2">Add Fleet Vehicles</h3>
+                <p class="text-muted">Register your trucks and drivers into the central data array to begin tracking.
+                </p>
+            </div>
+            <div class="card text-center" style="border-top: 4px solid var(--primary-accent);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--bg-tertiary); margin-bottom: 10px;">02</div>
+                <i class="fa-solid fa-display card-icon"></i>
+                <h3 class="mb-2">Monitor Data</h3>
+                <p class="text-muted">Watch distance and fuel metrics update continuously across your SaaS interfaces.
+                </p>
+            </div>
+            <div class="card text-center" style="border-top: 4px solid var(--primary-accent);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--bg-tertiary); margin-bottom: 10px;">03</div>
+                <i class="fa-solid fa-bell card-icon"></i>
+                <h3 class="mb-2">Receive Smart Alerts</h3>
+                <p class="text-muted">Let the algorithm automatically notify you when it's time for vehicle service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section container reveal text-center mb-4"
+        style="background: linear-gradient(45deg, var(--bg-secondary), var(--bg-dark)); padding: 4rem 2rem; border-radius: 20px; border: 1px solid var(--primary-accent); box-shadow: 0 0 30px rgba(0,102,255,0.1);">
+        <h2 style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">Ready to Upgrade Your Operations?</h2>
+        <p class="text-muted mb-4" style="font-size: 1.2rem;">Start Managing Your Fleet Smarter today with our SaaS
+            dashboard.</p>
+        <a href="dashboard.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Go To Fleet
+            Dashboard</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div style="flex:1;">
+                <a href="index.html" class="logo mb-2" style="font-size: 1.5rem;">
+                    <i class="fa-solid fa-flag-checkered"></i> Fleet<span>Care</span>
+                </a>
+                <p>123 Logistics Way, Transport City, TC 90210<br>contact@fleetcare.saas | (800) 555-FLTC</p>
+                <p style="margin-top: var(--spacing-sm);">&copy; 2026 FleetCare Dashboard. All rights reserved.</p>
+            </div>
+            <div class="footer-links" style="flex:1; text-align:center;">
+                <a href="#why-us">Why Us</a>
+                <a href="#services">Services</a>
+                <a href="#features">Features</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="flex" style="gap: var(--spacing-md); flex:1; justify-content: flex-end;">
+                <a href="#"><i class="fa-brands fa-github" style="font-size: 1.5rem;"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" style="font-size: 1.5rem;"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin" style="font-size: 1.5rem;"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

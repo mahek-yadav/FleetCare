@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Vehicles | FleetCare Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="carbon-bg">
+
+    <!-- Mobile Dashboard Header -->
+    <div class="mobile-header">
+        <div class="logo"><i class="fa-solid fa-flag-checkered" style="color:var(--text-white);"></i> Fleet<span
+                style="color:var(--primary-accent);">Care</span></div>
+        <button id="header-mobile-btn" class="mobile-menu-btn" style="display:block;">
+            <i class="fa-solid fa-bars" style="color:var(--text-white);"></i>
+        </button>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-flag-checkered"></i> Fleet<span>Care</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Overview</a></li>
+                    <li><a href="vehicles.html" class="active"><i class="fa-solid fa-truck"></i> Vehicles</a></li>
+                    <li><a href="maintenance.html"><i class="fa-solid fa-wrench"></i> Maintenance</a></li>
+                    <li><a href="fuel.html"><i class="fa-solid fa-gas-pump"></i> Fuel Monitoring</a></li>
+                    <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+                    <li style="margin-top:20px; border-top: var(--border-thin); padding-top:10px;">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="flex items-center justify-between"
+                style="border-bottom: 2px solid var(--border-thin); padding-bottom: 10px; margin-bottom: 20px;">
+                <h1 style="color: var(--text-white); font-size: 2rem;"><i class="fa-solid fa-truck"
+                        style="color: var(--primary-accent);"></i> Fleet Vehicles</h1>
+                <button class="btn btn-primary" onclick="showToast('Add vehicle form locked.', 'info')"><i
+                        class="fa-solid fa-plus"></i> Add Vehicle</button>
+            </div>
+
+            <p class="text-muted mb-4">Live overview of your active fleet, total mileage, and dynamic service statuses
+                calculated in real-time.</p>
+
+
+
+            <div id="vehicles-container" class="vehicle-grid">
+                <!-- Javascript will generate the cards here -->
+                <p>Loading fleet data...</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

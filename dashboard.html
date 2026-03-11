@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview | FleetCare Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="carbon-bg">
+
+    <!-- Mobile Dashboard Header -->
+    <div class="mobile-header">
+        <div class="logo"><i class="fa-solid fa-flag-checkered" style="color:var(--text-white);"></i> Fleet<span
+                style="color:var(--primary-accent);">Care</span></div>
+        <button id="header-mobile-btn" class="mobile-menu-btn" style="display:block;">
+            <i class="fa-solid fa-bars" style="color:var(--text-white);"></i>
+        </button>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-flag-checkered"></i> Fleet<span>Care</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="fa-solid fa-chart-pie"></i> Overview</a></li>
+                    <li><a href="vehicles.html"><i class="fa-solid fa-truck"></i> Vehicles</a></li>
+                    <li><a href="maintenance.html"><i class="fa-solid fa-wrench"></i> Maintenance</a></li>
+                    <li><a href="fuel.html"><i class="fa-solid fa-gas-pump"></i> Fuel Monitoring</a></li>
+                    <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+                    <li style="margin-top:20px; border-top: var(--border-thin); padding-top:10px;">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="flex items-center justify-between"
+                style="border-bottom: 2px solid var(--border-thin); padding-bottom: 10px; margin-bottom: 20px;">
+                <h1 style="color: var(--text-white); font-size: 2rem; text-transform: uppercase; letter-spacing: 2px;">
+                    <i class="fa-solid fa-gauge-high" style="color: var(--primary-accent);"></i> Fleet Overview
+                </h1>
+                <a href="reports.html" class="btn btn-outline glow-border"
+                    style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Generate Report</a>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="overview-grid">
+                <!-- Total Vehicles -->
+                <div class="card stat-card glow-border card-good">
+                    <i class="fa-solid fa-truck-fast stat-icon"></i>
+                    <div class="stat-number"><span id="overview-total-vehicles">0</span></div>
+                    <div class="stat-label">Total Vehicles</div>
+                </div>
+
+                <!-- Active Alerts -->
+                <div class="card stat-card glow-border card-critical">
+                    <i class="fa-solid fa-triangle-exclamation stat-icon"></i>
+                    <div class="stat-number"><span id="overview-active-alerts">0</span></div>
+                    <div class="stat-label">Active Alerts</div>
+                </div>
+
+                <!-- Service Due -->
+                <div class="card stat-card glow-border card-warning">
+                    <i class="fa-solid fa-screwdriver-wrench stat-icon"></i>
+                    <div class="stat-number"><span id="overview-service-due">0</span></div>
+                    <div class="stat-label">Service Due</div>
+                </div>
+
+                <!-- Avg Fuel Efficiency -->
+                <div class="card stat-card glow-border card-info">
+                    <i class="fa-solid fa-gas-pump stat-icon"></i>
+                    <div class="stat-number"><span id="overview-avg-fuel">0</span><span
+                            style="font-size: 1.5rem; margin-left: 5px;">km/l</span></div>
+                    <div class="stat-label">Avg Fuel Efficiency</div>
+                </div>
+            </div>
+
+            <!-- Grid Layout for Telemetry + Pie Chart -->
+            <div class="dashboard-content-grid">
+                <!-- Live Telemetry Feed -->
+                <div class="card glow-border">
+                    <h3
+                        style="margin-bottom: var(--spacing-lg); border-bottom: var(--border-thin); padding-bottom: var(--spacing-xs); color: var(--text-white);">
+                        Live Telemetry Feed
+                    </h3>
+
+                    <div class="flex flex-col" style="gap: var(--spacing-md);">
+                        <div class="flex justify-between items-center"
+                            style="padding: var(--spacing-sm) var(--spacing-md); background: rgba(255,255,255,0.03); border-radius: var(--border-radius);">
+                            <div class="flex items-center" style="gap: var(--spacing-md);">
+                                <div
+                                    style="width: 10px; height: 10px; border-radius: 50%; background: var(--status-critical); box-shadow: 0 0 10px var(--status-critical);">
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text-white);">Vehicle V-042 - Engine
+                                        Overheating</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">2 mins ago | Speed:
+                                        110km/h</div>
+                                </div>
+                            </div>
+                            <a href="reports.html" class="btn btn-primary"
+                                style="padding: var(--spacing-xs) var(--spacing-sm); font-size: 0.8rem;">View</a>
+                        </div>
+
+                        <div class="flex justify-between items-center"
+                            style="padding: var(--spacing-sm) var(--spacing-md); background: rgba(255,255,255,0.03); border-radius: var(--border-radius);">
+                            <div class="flex items-center" style="gap: var(--spacing-md);">
+                                <div
+                                    style="width: 10px; height: 10px; border-radius: 50%; background: var(--status-warning); box-shadow: 0 0 10px var(--status-warning);">
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text-white);">Vehicle V-108 - Service Due
+                                        Soon</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">15 mins ago | Mileage:
+                                        98,500 km</div>
+                                </div>
+                            </div>
+                            <a href="maintenance.html" class="btn btn-outline"
+                                style="padding: var(--spacing-xs) var(--spacing-sm); font-size: 0.8rem;">Schedule</a>
+                        </div>
+
+                        <div class="flex justify-between items-center"
+                            style="padding: var(--spacing-sm) var(--spacing-md); background: rgba(255,255,255,0.03); border-radius: var(--border-radius);">
+                            <div class="flex items-center" style="gap: var(--spacing-md);">
+                                <div
+                                    style="width: 10px; height: 10px; border-radius: 50%; background: var(--status-good); box-shadow: 0 0 10px var(--status-good);">
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text-white);">Vehicle V-022 - Refueled
+                                    </div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">1 hour ago | 45 Liters
+                                        added</div>
+                                </div>
+                            </div>
+                            <a href="fuel.html" class="btn btn-outline"
+                                style="padding: var(--spacing-xs) var(--spacing-sm); font-size: 0.8rem;">Log</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fleet Status Pie Chart -->
+                <div class="card glow-border" style="display: flex; flex-direction: column;">
+                    <h3
+                        style="margin-bottom: var(--spacing-lg); border-bottom: var(--border-thin); padding-bottom: var(--spacing-xs); color: var(--text-white);">
+                        Fleet Status
+                    </h3>
+                    <div
+                        style="position: relative; flex: 1; min-height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <canvas id="statusPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mileage Bar Chart -->
+            <div class="card glow-border" style="margin-top: var(--spacing-xl);">
+                <h3
+                    style="margin-bottom: var(--spacing-lg); border-bottom: var(--border-thin); padding-bottom: var(--spacing-xs); color: var(--text-white);">
+                    Mileage by Vehicle
+                </h3>
+                <div style="position: relative; height: 260px; width: 100%;">
+                    <canvas id="mileageBarChart"></canvas>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
