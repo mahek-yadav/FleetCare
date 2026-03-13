@@ -740,79 +740,90 @@ footer {
 
 /* Dashboard */
 .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
+    }
 
-        .stat-card {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: var(--spacing-xl) var(--spacing-md);
-            background: var(--bg-secondary);
-        }
+    .overview-grid > * {
+        flex: 1 1 200px;
+    }
 
-        .stat-icon {
-            font-size: 2.5rem;
-            margin-bottom: var(--spacing-md);
-            filter: drop-shadow(0 0 10px var(--accent-glow));
-        }
+    .stat-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xl) var(--spacing-md);
+        background: var(--bg-secondary);
+    }
 
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: var(--spacing-xs);
-            color: var(--text-white);
-            font-variant-numeric: tabular-nums;
-            display: flex;
-            align-items: baseline;
-        }
+    .stat-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+        filter: drop-shadow(0 0 10px var(--accent-glow));
+    }
 
-        .stat-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-top: var(--spacing-sm);
-        }
+    .stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: var(--spacing-xs);
+        color: var(--text-white);
+        font-variant-numeric: tabular-nums;
+        display: flex;
+        align-items: baseline;
+    }
 
-        .card-good .stat-icon {
-            color: var(--status-good);
-            filter: drop-shadow(0 0 10px rgba(0, 255, 102, 0.4));
-        }
+    .stat-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-muted);
+        font-weight: 600;
+        margin-top: var(--spacing-sm);
+    }
 
-        .card-warning .stat-icon {
-            color: var(--status-warning);
-            filter: drop-shadow(0 0 10px rgba(255, 184, 0, 0.4));
-        }
+    .card-good .stat-icon {
+        color: var(--status-good);
+        filter: drop-shadow(0 0 10px rgba(0, 255, 102, 0.4));
+    }
 
-        .card-critical .stat-icon {
-            color: var(--status-critical);
-            filter: drop-shadow(0 0 10px rgba(255, 30, 30, 0.4));
-        }
+    .card-warning .stat-icon {
+        color: var(--status-warning);
+        filter: drop-shadow(0 0 10px rgba(255, 184, 0, 0.4));
+    }
 
-        .card-info .stat-icon {
-            color: var(--neon-blue);
-            filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
-        }
+    .card-critical .stat-icon {
+        color: var(--status-critical);
+        filter: drop-shadow(0 0 10px rgba(255, 30, 30, 0.4));
+    }
 
+    .card-info .stat-icon {
+        color: var(--neon-blue);
+        filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
+    }
+
+    .dashboard-content-grid {
+        display: flex;
+        gap: var(--spacing-xl);
+    }
+
+    .dashboard-content-grid > :first-child {
+        flex: 2;
+    }
+
+    .dashboard-content-grid > :last-child {
+        flex: 1;
+    }
+
+    @media(max-width: 1024px) {
         .dashboard-content-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: var(--spacing-xl);
+            flex-direction: column;
         }
-
-        @media(max-width: 1024px) {
-            .dashboard-content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    }
 
 /* Fuel */
 .table-wrapper {
